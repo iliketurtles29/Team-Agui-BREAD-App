@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="639.0" prefWidth="1017.0" style="-fx-background-color: #222831;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oopclass.breadapp.controllers.ReportController">
+   <children>
+      <Pane prefHeight="92.0" prefWidth="1025.0" style="-fx-background-color: White;">
+         <children>
+            <TextField fx:id="filterField" layoutX="827.0" layoutY="45.0" prefHeight="33.0" prefWidth="169.0" promptText="Search" style="-fx-background-color: #393E46; -fx-text-fill: WHITE;">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <DatePicker fx:id="creation" editable="false" layoutX="349.0" layoutY="17.0" opacity="0.0" prefHeight="29.0" prefWidth="14.0" stylesheets="@../styles/Styles.css" />
+            <ImageView fitHeight="128.0" fitWidth="236.0" layoutX="-8.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/316568943_730482681275443_24885123076062493_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TextField fx:id="lastName" layoutX="298.0" layoutY="103.0" prefHeight="39.0" prefWidth="217.0" promptText=" Last Name" style="-fx-background-color: #EEEEEE; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #00ADB5;">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="number" layoutX="544.0" layoutY="103.0" prefHeight="39.0" prefWidth="217.0" promptText="Mobile No." style="-fx-background-color: #EEEEEE; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #00ADB5;">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </TextField>
+      <RadioButton fx:id="rbApproved" layoutX="804.0" layoutY="125.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" styleClass="rad" text="Approved" textFill="#eeeeee">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="status" />
+         </toggleGroup>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <RadioButton fx:id="rbDeclined" layoutX="804.0" layoutY="158.0" mnemonicParsing="false" text="Declined" textFill="#eeeeee" toggleGroup="$status">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <TextField fx:id="reason" layoutX="45.0" layoutY="151.0" prefHeight="56.0" prefWidth="716.0" promptText="   Reason" style="-fx-background-color: #EEEEEE; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #00ADB5;">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="reportTable" layoutX="37.0" layoutY="216.0" prefHeight="352.0" prefWidth="952.0" style="-fx-background-color: EEEEEE;" stylesheets="@../styles/Styles.css" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn fx:id="colUserId" maxWidth="700.0" prefWidth="38.0" text="ID" />
+            <TableColumn fx:id="colFirstName" maxWidth="4000.0" prefWidth="110.0" text="First Name" />
+            <TableColumn fx:id="colLastName" maxWidth="4000.0" prefWidth="127.0" text="Last Name" />
+            <TableColumn fx:id="colNumber" maxWidth="3500.0" prefWidth="121.0" text="Mobile No." />
+            <TableColumn fx:id="colReason" maxWidth="3500.0" prefWidth="258.0" text="Reason" />
+            <TableColumn fx:id="colCreation" minWidth="0.0" prefWidth="115.0" text="Date Created" />
+            <TableColumn fx:id="colStatus" maxWidth="3500.0" prefWidth="113.0" text="Status" />
+            <TableColumn fx:id="colEdit" maxWidth="3500.0" prefWidth="56.0" text="Edit" />
+         </columns>
+         <styleClass>
+            <String fx:value="table-cell" />
+            <String fx:value="arrow-button" />
+         </styleClass>
+      </TableView>
+      <Button fx:id="saveUser" layoutX="893.0" layoutY="577.0" mnemonicParsing="false" onAction="#saveUser" prefHeight="49.0" prefWidth="91.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 15;" styleClass="com-btn" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Screenshot%202022-12-13%20205756.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="reset" layoutX="688.0" layoutY="577.0" mnemonicParsing="false" onAction="#reset" prefHeight="49.0" prefWidth="91.0" style="-fx-background-color: #FFE15D; -fx-background-radius: 15;" styleClass="com-btn" text="Reset" textFill="#110f0f">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Screenshot%202022-12-13%20210557.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="back" layoutX="41.0" layoutY="577.0" mnemonicParsing="false" onAction="#back" prefHeight="49.0" prefWidth="91.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 15;" styleClass="com-btn" text="Back" textFill="#110f0f">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="deletePar" layoutX="793.0" layoutY="577.0" mnemonicParsing="false" onAction="#deletePar" prefHeight="49.0" prefWidth="91.0" style="-fx-background-color: #FF6464; -fx-background-radius: 15;" styleClass="com-btn" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Screenshot%202022-12-13%20210417.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="803.0" layoutY="104.0" text="Report Status:" textFill="#eeeeee">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="userId" layoutX="39.0" layoutY="86.0" opacity="0.0" textFill="#222831">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rbUnder" layoutX="804.0" layoutY="186.0" mnemonicParsing="false" selected="true" text="Under Consideration" textFill="#eeeeee" toggleGroup="$status">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <TextField fx:id="firstName" layoutX="45.0" layoutY="104.0" prefHeight="39.0" prefWidth="226.0" promptText=" First Name" style="-fx-background-color: #EEEEEE; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #00ADB5;">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </TextField>
+      <Pane prefHeight="30.0" prefWidth="1025.0" style="-fx-background-color: #222831;">
+         <children>
+            <Label fx:id="time" alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="8.0" prefHeight="16.0" prefWidth="1025.0" text="Label" textFill="#e5e6e8">
+               <font>
+                  <Font name="Verdana Pro" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="992.0" layoutY="4.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/close.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="961.0" layoutY="4.0" onMouseClicked="#mini" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/minimi.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

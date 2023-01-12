@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="493.0" prefWidth="709.0" style="-fx-background-color: #3A3F47;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oopclass.breadapp.controllers.MainMenuController">
+   <children>
+      <Pane prefHeight="110.0" prefWidth="660.0" style="-fx-background-color: wHITE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="294.0" fitWidth="353.0" layoutX="331.0" layoutY="-79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/20221211_152557.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="478.0" layoutY="125.0" prefHeight="133.0" prefWidth="219.0" style="-fx-background-color: #F38181; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;">
+               <children>
+                  <Label layoutX="95.0" layoutY="93.0" text="Reports" textFill="#222831">
+                     <font>
+                        <Font name="Yu Gothic Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="reportNo" layoutX="68.0" layoutY="93.0" prefHeight="26.0" prefWidth="29.0" textFill="#222831">
+                     <font>
+                        <Font name="Yu Gothic Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="80.0" fitWidth="85.0" layoutX="78.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Screenshot%202022-12-29%20213916.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane layoutX="246.0" layoutY="125.0" prefHeight="133.0" prefWidth="219.0" style="-fx-background-color: #FCE38A; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;">
+               <children>
+                  <Label layoutX="81.0" layoutY="96.0" text="Instructors" textFill="#222831">
+                     <font>
+                        <Font name="Yu Gothic Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="instructorNo" layoutX="54.0" layoutY="96.0" prefHeight="26.0" prefWidth="29.0" textFill="#222831">
+                     <font>
+                        <Font name="Yu Gothic Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="80.0" fitWidth="85.0" layoutX="69.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Screenshot%202022-12-29%20213159.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+         </children></Pane>
+      <Pane layoutY="-5.0" prefHeight="30.0" prefWidth="709.0" style="-fx-background-color: #222831;">
+         <children>
+            <Label fx:id="time" alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="8.0" prefHeight="24.0" prefWidth="703.0" text="Label" textFill="#eeeeee">
+               <font>
+                  <Font name="Verdana Pro" size="13.0" />
+               </font>
+               <padding>
+                  <Insets bottom="4.0" />
+               </padding>
+            </Label>
+            <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="647.0" layoutY="7.0" onMouseClicked="#mini" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/minimi.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="161.0" fitWidth="294.0" layoutX="-39.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/316467284_1077683639573786_6885395425163072331_n.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="back" layoutX="586.0" layoutY="444.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="102.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 15;" styleClass="com-btn" text="LOGOUT" textFill="#110f0f">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/317217579_813383033090640_6839613282317641423_n.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="170.0" fitWidth="193.0" layoutX="19.0" layoutY="274.0" onMouseClicked="#addUser" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/317670407_725190142109238_3680906191871316058_n.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="678.0" layoutY="2.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/close.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="170.0" fitWidth="193.0" layoutX="525.0" layoutY="274.0" onMouseClicked="#addReport" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/320636395_560295435563163_7171914583109102443_n.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="170.0" fitWidth="193.0" layoutX="191.0" layoutY="274.0" onMouseClicked="#addPayment" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/316839803_2446373342200186_9032323065852821774_n.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="170.0" fitWidth="193.0" layoutX="358.0" layoutY="274.0" onMouseClicked="#addInstructor" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/319281177_1291020851680789_5601413947236324212_n.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Pane layoutX="14.0" layoutY="128.0" prefHeight="133.0" prefWidth="219.0" style="-fx-background-color: #95E1D3; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="89.0" layoutY="96.0" text="Trainees" textFill="#222831">
+               <font>
+                  <Font name="Yu Gothic Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="traineeNo" layoutX="62.0" layoutY="95.0" prefHeight="26.0" prefWidth="20.0" textFill="#222831">
+               <font>
+                  <Font name="Yu Gothic Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="80.0" fitWidth="113.0" layoutX="53.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Screenshot%202022-12-29%20213121.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+   </children>
+</AnchorPane>
