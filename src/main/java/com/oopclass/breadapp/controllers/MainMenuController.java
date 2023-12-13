@@ -65,6 +65,9 @@ public class MainMenuController implements Initializable{
     @FXML
     private Label time;
     
+    // @FXML
+    // private Label time;
+    
     @FXML
     private Label instructorNo;
 
